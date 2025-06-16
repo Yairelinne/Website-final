@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yes or No Spinner</title>
+  <style>
+    body {
+      background: radial-gradient(circle, #e0eafc, #cfdef3);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    #result {
+      font-size: 2.5em;
+      margin: 20px 0;
+      height: 50px;
+    }
+
+    #message {
+      font-size: 1.2em;
+      color: #555;
+      height: 30px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1em;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    a {
+      display: block;
+      margin-top: 30px;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Should You Do It?</h1>
+    <div id="result">🎲</div>
+    <div id="message">Click the button to decide</div>
+    <button onclick="spinDecision()">Spin the Answer</button>
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="about.html" class="btn btn-outline-secondary">← Back to About Page</a>
+      </div>
+  </div>
+
+  <script>
+    const decisions = [
+      { answer: "✅ YES!", message: "Go for it. You’ve got this!" },
+      { answer: "❌ NO!", message: "Probably not the best idea right now." }
+    ];
+
+    function spinDecision() {
+      document.getElementById("result").textContent = "⏳";
+      document.getElementById("message").textContent = "Thinking...";
+
+      setTimeout(() => {
+        const choice = decisions[Math.floor(Math.random() * decisions.length)];
+        document.getElementById("result").textContent = choice.answer;
+        document.getElementById("message").textContent = choice.message;
+      }, 1000); // suspense effect
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+
+.h4_custom {
+  font-weight: normal;
+  font-size: 24px;
+}
+.custom_TOC {
+  font-weight: normal;
+  font-size: 24px;
+  text-decoration: underline;
+}
+.education_header{
+  font-weight: 800;
+}
+.contact_box{
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+.t_header{
+  height: 50px;
+  width: 100%;
+  background-color: lightgray;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+}
+.header_text{
+  position: relative;
+  bottom: 31%;
+  font-family: 'Lato', sans-serif;
+margin-left: 5px;
+margin-right: 5px;
+font-size: 22px;
+text-decoration: none;
+
+}
+.main_t{
+  
+  background-color: whitesmoke;
+  margin: 30px;
+}
